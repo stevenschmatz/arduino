@@ -1,20 +1,12 @@
 #include <Time.h>
 
-/*
-Steven Schmatz
-stevenschmatz@gmail.com
-23 November 2013
-
-SUNRISE CLOCK - Progresses through the colors of a sunrise before a set alarm time.
-*/
-
 //Arguments
-float durationMinutes = 30; //The duration of the light progression, in minutes.
+float durationMinutes = 1.0; //The duration of the light progression, in minutes.
 
-int plugInHour = 11; //The hours at 10pm, 24 hour time
-int plugInMinute = 20; //The minutes at 10:00pm
-int wakeHour = 9; //6am
-int wakeMinute = 00; // 6:00am
+int plugInHour = 22; //The hours at 10pm, 24 hour time
+int plugInMinute = 00; //The minutes at 10:00pm
+int wakeHour = 22; //6am
+int wakeMinute = 01; // 6:00am
 
 int secondsUntilWake(int plugInHour, int plugInMinute, int wakeHour, int wakeMinute) {  
   int hour1;
@@ -71,8 +63,8 @@ void setup(){
 void loop(){
   float max_range = 1023.0;
   float secondsUntilStart = secondsUntilWake(plugInHour, plugInMinute, wakeHour, wakeMinute)-(durationMinutes*60);
-  float seconds = int(float(millis())*100/1000.0)%(86400*100) -100*float(secondsUntilStart);
-  seconds = seconds/(100*durationMinutes*3.0);
+  float seconds = (float(millis())/1000.0)-secondsUntilStart;
+  seconds = seconds/(durationMinutes*3.0);
   float range_conversion = max_range/8.0;
   
   Serial.println(seconds); 
@@ -91,3 +83,6 @@ void loop(){
   
  
 }
+
+
+
