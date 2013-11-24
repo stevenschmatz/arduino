@@ -1,0 +1,32 @@
+black
+deep purple
+dark red
+medium red
+medium orange
+high medium white
+high medium blue-white
+high blue-white
+
+
+RED, GREEN, BLUE
+
+black: off, off, off
+purple: on, off, on
+red: on, off, off
+orange: on, on (half), off
+yellow: on, on (3/4), on (1/5)
+white: on, on, on (half)
+white-blue: on (3/4), on (3/4), on
+
+
+exp(-pow(((seconds-10.0)/5.0),2.0))*(seconds/12.5)
+1023-(((exp(-pow(((seconds-10.0)/5.0),2.0))*(seconds/12.5)))*range_conversion)
+1023-((     )*range_conversion)
+
+1.0/(1.0+exp(-((time-14.0)/1.25)))
++
+0.1*exp(-pow(((time-5.0)/2.0),2))
+*
+pow(time,-0.5)+1
+
+1023-((1.0/(1.0+exp(-((seconds-14.0)/1.25)))+0.1*exp(-pow(((seconds-5.0)/2.0),2))*pow(seconds,-0.5)+1)*range_conversion);
