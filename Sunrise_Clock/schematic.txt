@@ -1,0 +1,41 @@
+Steven Schmatz
+3 December 2013
+
+Sunrise Visual Alarm Clock Schematic
+
+-------------------------------------
+
+1. Pin Headers
+- Pin headers at the four corners of the breadboard
+
+2. Voltage input
+- Connector from 5V (Arduino) to [+] closest to pin header
+
+3. Ground
+- Connector from GND (Arduino) to [-] closest to pin header
+
+4. LEDs
+- Red LED, positive end in "a16" and negative end in "a17"
+- Green LED, positive end in "a12" and negative end in "a13"
+- Blue LED, positive end in "f9" and negative end in "f10"
+- RGB LED, red (shortest) end in "a1", ground (longest) end in "a2", green end in "a3", blue end in "a4"
+
+5. Resistors
+- 560 ohm resistor from "b12" to "d12"
+- 560 ohm resistor from "b17" to "d17"
+- 560 ohm resistor from "b4" to "d4"
+- 560 ohm resistor from "b3" to "d3"
+- 560 ohm resistor from "b1" to "d1"
+- 560 ohm resistor from "g10" to "i10"
+
+6. Connectors
+- Connector from [-] to "e17"
+- Connector from Digital Out 5 (PWM) to "e16"
+- Connector from [-] to "e13"
+- Connector from Digital Out 3 (PWM) to "e12"
+- Connector from [-] to "j10"
+- Connector from Digital Out 6 (PWM) to "j9"
+- Connector from Digital Out 11 (PWM) to "e4"
+- Connector from Digital Out 10 (PWM) to "e3"
+- Connector from [+] to "e2"
+- Connector from Digital Out 9 (PWM) to "e1"
